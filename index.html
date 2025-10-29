@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="/images/lp-logo.png" alt="">
+                </div>
+                <ul class="nav-link">
+                    <li onclick="location.href='#home'" ><a>home</a></li>
+                    <li onclick="location.href='#about'"><a>about</a></li>
+                    <li onclick="location.href='#features'"><a>features</a></li>
+                    <li onclick="location.href='#testimonials'"><a>testimonials</a></li>
+                    <li onclick="location.href='#contact'"><a>contact</a></li>
+                    <div class="toggle">
+                        <i class="fa-solid fa-bars hamburger"></i>
+                    </div>
+                </ul>
+                
+            </div>
+                
+                <div class="sidebar">
+                    <li onclick="location.href='#home'"><a>home</a></li>
+                    <li onclick="location.href='#about'"><a>about</a></li>
+                    <li onclick="location.href='#features'"><a>features</a></li>
+                    <li onclick="location.href='#testimonials'"><a>testimonials</a></li>
+                    <li onclick="location.href='#contact'"><a>contact</a></li>
+                </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1 class="hero-h1">Introducing ByteUprise</h1>
+                <p class="hero-p">Byte Uprise – Empowering innovation, one byte at a time.
+                    Transform ideas into reality with cutting-edge solutions.
+                    Rise above the ordinary and build the future!</p>
+           <a href="https://www.byteuprise.com" target="_blank"><button class="hero-btn">Get Started</button></a>     
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="about-h2">About <span>ByteUprise</span></h2>
+                <p class="about-p">
+                    ByteUprise is more than just an internship provider—it’s a launchpad for future tech leaders. We offer industry-relevant, hands-on training that bridges the gap between academics and real-world expertise. Our structured internship programs equip students with the latest skills, mentorship from industry experts, and real project experience, setting them apart in today’s competitive job market.
+                </p>
+                <p class="about-p">
+                    At ByteUprise, we don’t just train interns—we empower future innovators to thrive in the ever-evolving tech landscape.
+                </p>
+                <button class="about-btn">Learn More</button>
+            </div>
+            <div class="about-img">
+                <img src="images/about-img.png" alt="About Image">
+            </div>
+        </section>
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="grid-feat">
+                    <div class="feat">
+                        <h3 class="feat-h">Internship & Training Programs</h3><br>
+                        <p class="feat-p">Hands-on experience for students & professionals.</p>
+                    </div>
+                    <div class="feat">
+                        <h3 class="feat-h">Real-World Software Development</h3><br>
+                        <p class="feat-p">Involvement in actual client projects.</p>
+                    </div>
+                    <div class="feat">
+                        <h3 class="feat-h">IT Bootcamps & Workshops</h3><br>
+                        <p class="feat-p">Hands-on training in Web Dev, Cybersecurity, Cloud, etc.</p>
+                    </div>
+                    <div class="feat">
+                        <h3 class="feat-h">Open-Source Contribution Programs</h3><br>
+                        <p class="feat-p">Work on public projects & gain GitHub experience.</p>
+                    </div>
+                    <div class="feat">
+                        <h3 class="feat-h">Capstone Projects & Internships</h3><br>
+                        <p class="feat-p">Complete a full project from start to finish.</p>
+                    </div>
+                    <div class="feat">
+                        <h3 class="feat-h">Tech Community & Networking</h3><br>
+                        <p class="feat-p">Connect with IT professionals globally.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What our users say</h2>
+                <div class="test-grid">
+                    <p class="test-p">
+                        "ByteUprise provided me with hands-on experience in the tech industry. The mentors were incredibly supportive, and I gained real-world skills that helped me land my first job!"
+                    </p>
+                    <cite>John Doe</cite>
+                </div>
+                <div class="test-grid">
+                    <p class="test-p">
+                        "I was unsure about internships before, but ByteUprise exceeded my expectations. I worked on live projects, learned from industry experts, and built a strong portfolio!"
+                    </p>
+                    <cite>Jane Doe</cite>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <p class="contact-p">
+                    If you have any questions or need help with your website, please don't hesitate to contact us.
+                </p>
+                <form action="#">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 ByteUprise. All rights reserved.</p>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const sidebar = document.querySelector('.sidebar');
+
+        hamburger.addEventListener('click', () => {
+            if (sidebar.style.right === "0px") {
+                sidebar.style.right = "-250px"; // Close sidebar
+                hamburger.classList.remove('active');
+                hamburger.classList.replace('fa-xmark', 'fa-bars'); // Change back to ☰
+            } else {
+                sidebar.style.right = "0"; // Open sidebar
+                hamburger.classList.add('active');
+                hamburger.classList.replace('fa-bars', 'fa-xmark'); // Change to ✖
+            }
+        });
+    </script>
+</body>
+</html>
+
